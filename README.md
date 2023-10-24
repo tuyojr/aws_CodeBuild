@@ -45,7 +45,7 @@ Use the AWS Cloud9 environment that was assigned to you to explore what has been
 1. On the navigation bar, enter `cloud9` into the __Search__ bar and press ENTER.
 2. Choose Open link under `Cloud9 IDE` column.
 
-![aws_CodeBuild_task1]()
+![aws_CodeBuild_task1](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task1.png)
 
 > Note: If you receive and error message that says it is “Unable to register Service Workers due to browser restrictions, Webviews will not work properly”, you can safely choose ok and ignore it for this lab.
 
@@ -56,7 +56,7 @@ cd ~/environment/web-application/react-app
 npm install
 npm start
 ```
-![aws_CodeBuild_task1_1]()
+![aws_CodeBuild_task1_1](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task1_1.png)
 
 One of the first things that the team learned was the importance of reproducible environments. Most modern applications depend on many open source tools and frameworks for features, build, and test tools. When you develop code for these applications, you need to be able to install these dependencies to test and build your code. Your CI/CD pipeline also installs these same dependencies to build and test the application. Package managers make managing versions of and installing these dependencies controllable. This is a crucial part of testing. In order for your tests to be accurate you need to reduce the number of variables that can cause issues. A failed test can only be caused by a change. Ensuring that your code is the only thing that changes, and not the environment saves time when troubleshooting.
 
@@ -68,7 +68,7 @@ This application was created with the [create-react-app](https://github.com/face
 
 You see the “Tic-Tac-Toe!” web page in the preview and you can play the game to test it. Tic-Tac-Toe, alternates moves between player X and player O, each move captures a square. The winner is determined when a player captures three squares in a row; vertically, horizontally, or diagonally.
 
-![aws_CodeBuild_task1_1_2]()
+![aws_CodeBuild_task1_1_2](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task1_1_2.png)
 
 __TASK 1.2: REVIEW THE INSTRUCTIONS USED BY AWS CODEBUILD__
 
@@ -180,14 +180,14 @@ Wait until the pipeline finishes.
 
 You will see that the pipeline is now failing on the __Build Stage__.
 
-![aws_CodeBuild_task3_1]()
+![aws_CodeBuild_task3_1](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task3_1.png)
 
 12. On the __build-and-test__ action, choose `View in CodeBuild`.
 13. Choose the Phase details tab.
 
 The __BUILD__ phase is failing with a __COMMAND_EXECUTION_ERROR__. There is an error executing the command that instructed npm to test your code in the CI environment. The developers have exported a test report to CodeBuild that you can use to view the results of the tests.
 
-![aws_CodeBuild_task3_1_build_fail]()
+![aws_CodeBuild_task3_1_build_fail](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task3_1_build_fail.png)
 
 14. Choose the __Reports__ tab.
 15. Choose the __Report__ name for the __Failed Test__ report.
@@ -379,7 +379,7 @@ wins = [
 
 The test runner application immediately runs the tests in your terminal window. You should see that you now have only one failed test, and eight passed. You’re making progress! Now you need to fix the __PageHeader__.
 
-![aws_CodeBuild_task3_2]()
+![aws_CodeBuild_task3_2](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task3_2.png)
 
 You have received a message from the Marketing department and the correct title has an exclamation mark at the end, the test is correct. You need to correct your code for the test pass.
 
@@ -394,7 +394,7 @@ const title = "Tic-Tac-Toe!";
 
 Awesome, all tests pass now! You can commit and push your code to the shared repository.
 
-![aws_CodeBuild_task3_2_passing_tests]()
+![aws_CodeBuild_task3_2_passing_tests](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task3_2_passing_tests.png)
 
 29. Press Q on your keyboard in the Cloud9 __Terminal__ window to exit the test runner.
 30. Run the following code to commit and push your changes to AWS CodeCommit.
@@ -410,7 +410,7 @@ git push
 32. In the left navigation pane, expand  __Pipeline__ --> `CodePipeline`, and choose `Pipelines`.
 33. Choose the __web-application-pipeline__.
 
-![aws_CodeBuild_task3_2_pipeline_fail]()
+![aws_CodeBuild_task3_2_pipeline_fail](https://github.com/tuyojr/aws_CodeBuild/blob/main/aws_CodeBuild_task3_2_pipeline_fail.png)
 
 …and fail again on the __Build Stage__.
 
@@ -551,3 +551,10 @@ You can see that all of the tests are showing in this report.
 52. Choose the __Report__ name to view the __Code coverage__ report.
 
 You now have 100% code coverage so that any change to your application will catch an unexpected user outcome.
+
+__End lab__
+Follow these steps to close the console and end your lab.
+
+53. Return to the AWS Management Console.
+54. At the upper-right corner of the page, choose AWSLabsUser, and then choose Sign out.
+55. Choose End lab and then confirm that you want to end your lab.
